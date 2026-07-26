@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DE.NET // Progress Tracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="crt-overlay" aria-hidden="true"></div>
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-brand">
+        <div class="brand-mark">DE</div>
+        <div class="brand-text">
+          <span class="brand-title">DE.NET</span>
+          <span class="brand-sub">ROADMAP // v2.0</span>
+        </div>
+        <button type="button" class="sidebar-close" id="sidebarClose" aria-label="Close menu">✕</button>
+      </div>
+
+      <div class="sidebar-status">
+        <div class="status-row">
+          <span class="blink">●</span> SYSTEM ONLINE
+        </div>
+        <div class="status-row muted">STORAGE: LOCAL</div>
+      </div>
+
+      <nav class="sidebar-nav" id="siteNav"></nav>
+
+      <div class="sidebar-progress">
+        <div class="panel-label">// SIGNAL STRENGTH</div>
+        <div class="progress-row">
+          <div class="progress-label">
+            <span>OVERALL</span>
+            <strong id="overallPct">0%</strong>
+          </div>
+          <div class="bar"><div class="bar-fill" id="overallBar"></div></div>
+        </div>
+        <div class="progress-row">
+          <div class="progress-label">
+            <span>CORE_80</span>
+            <strong id="corePct">0%</strong>
+          </div>
+          <div class="bar"><div class="bar-fill core" id="coreBar"></div></div>
+        </div>
+        <p class="progress-meta" id="progressMeta">0 / 0 items</p>
+      </div>
+
+      <div class="sidebar-actions">
+        <label class="toggle">
+          <input type="checkbox" id="fastTrackToggle" />
+          <span>FAST_TRACK</span>
+        </label>
+        <button type="button" id="btnBackup" class="btn">BACKUP</button>
+        <label class="btn btn-file">
+          RESTORE
+          <input type="file" id="restoreFile" accept="application/json,.json" hidden />
+        </label>
+        <button type="button" id="btnReset" class="btn btn-danger">RESET</button>
+      </div>
+    </aside>
+
+    <div class="sidebar-backdrop" id="sidebarBackdrop" hidden></div>
+
+    <div class="main-wrap">
+      <header class="topbar">
+        <button type="button" class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+        <div class="topbar-copy">
+          <h1>PYTHON_FOR_DE <span class="accent">// TRACKER</span></h1>
+          <p class="subtitle">cyber-retro dashboard · localStorage · 80/20 protocol</p>
+        </div>
+        <div class="topbar-chip">
+          <span class="chip-dot"></span>
+          SECURE_SESSION
+        </div>
+      </header>
+
+      <main>
+        <section id="prereqs" class="card"></section>
+        <section id="sqlHabit" class="card"></section>
+        <section id="weeks" class="weeks"></section>
+        <section id="components" class="card"></section>
+        <section id="dailyLog" class="card"></section>
+      </main>
+
+      <footer class="site-footer">
+        <p>&gt; DATA_PERSISTENCE: browser localStorage only · run BACKUP before wipe</p>
+      </footer>
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
