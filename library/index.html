@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DE.NET // Tool Library</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="library.css" />
+</head>
+<body>
+  <div class="crt-overlay" aria-hidden="true"></div>
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-brand">
+        <div class="brand-mark">LIB</div>
+        <div class="brand-text">
+          <span class="brand-title">DE.NET</span>
+          <span class="brand-sub">TOOL_LIBRARY // v1.0</span>
+        </div>
+        <button type="button" class="sidebar-close" id="sidebarClose" aria-label="Close menu">✕</button>
+      </div>
+
+      <div class="sidebar-status">
+        <div class="status-row"><span class="blink">●</span> ARCHIVE ONLINE</div>
+        <div class="status-row muted">ROADMAP-ALIGNED TOOLS</div>
+      </div>
+
+      <div class="sidebar-search">
+        <input type="search" id="searchInput" placeholder="SEARCH TOOLS…" autocomplete="off" />
+      </div>
+
+      <nav class="sidebar-nav" id="siteNav"></nav>
+
+      <div class="sidebar-footer-link">
+        <a href="../index.html">← ROADMAP TRACKER</a>
+      </div>
+    </aside>
+
+    <div class="sidebar-backdrop" id="sidebarBackdrop" hidden></div>
+
+    <div class="main-wrap">
+      <header class="topbar">
+        <button type="button" class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+        <div class="topbar-copy">
+          <h1>TOOL_LIBRARY <span class="accent">// DE DOCS</span></h1>
+          <p class="subtitle">business · technical · example code · cyber archive</p>
+        </div>
+        <div class="topbar-chip">
+          <span class="chip-dot"></span>
+          DOCS_MODE
+        </div>
+      </header>
+
+      <main id="mainContent"></main>
+
+      <footer class="site-footer">
+        <p>&gt; LIBRARY synced to Python DE roadmap · open as local HTML</p>
+      </footer>
+    </div>
+  </div>
+
+  <script src="content.js"></script>
+  <script src="library-app.js"></script>
+</body>
+</html>
